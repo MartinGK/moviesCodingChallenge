@@ -1,0 +1,22 @@
+
+/* 
+* SCROLLBAR
+* */
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #8A6741;
+    border-radius: 50%;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 50%;
+    background-color: #8A6741;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, #5D120A), color-stop(0.75, #83341E), color-stop(1, #5D120A));
+}

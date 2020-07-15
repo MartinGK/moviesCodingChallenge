@@ -1,0 +1,27 @@
+/********************************SASS MAIN***********************************/
+
+//ABSTRACTS
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+//BASE
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+//GENERIC COMPONENTS
+@import "components/button";
+    
+// //LAYOUT
+@import "layout/grid";
+@import "layout/position";
+@import "layout/scrollbar";
+
+// //PAGES
+@import "pages/home";
+
+// //PAGES COMPONENTS
+// @import "pages/components/lateralButton";
+

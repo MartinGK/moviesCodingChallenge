@@ -1,0 +1,27 @@
+*,
+*::afeter,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    width: 100%;
+    height: 100%;
+    //This makes 1rem = 10px
+    font-size: 62.5%;
+    font-family: Roboto;
+    @include responsive(phone){
+        //font-size: 50%
+    }
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+}
