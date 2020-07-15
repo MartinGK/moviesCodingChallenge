@@ -1,0 +1,28 @@
+.searchInputContainer{
+    width: fit-content;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+}
+
+.searchInput{
+    background: $secondaryColor;
+    border: none;
+    width: 20rem;
+    padding: 1rem 3rem 1rem 1rem;
+    border-radius: .5rem;
+    &::placeholder{
+        font-size: 1.4rem;
+    }
+}
+
+.scopeIcon{
+    justify-self: flex-end;
+    // position: absolute;
+    width: 2rem;
+    margin-left: -2.2rem;
+    // margin-top: .2rem;
+    opacity: .5;
+    color: $primaryColor;
+    background-color: $secondaryColor;
+}

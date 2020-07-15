@@ -1,0 +1,42 @@
+.homeComponent{
+    min-width: 100vw;
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+
+.backgroundImage{
+    position: fixed;
+    background-image: url(/movieIcon.png);
+    opacity: 0.3;
+    background-size: 50rem 46rem;
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    transform: rotateY(180deg) rotate(-10deg);
+    z-index: -1;
+}
+.pageTitle{
+    color: $secondaryColor;
+}
+
+.topNavComponent{
+    width: 100vw;
+    background: $primaryColor;
+    min-height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+    position: fixed;
+}
+
+.movieListContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 1.5rem;
+}

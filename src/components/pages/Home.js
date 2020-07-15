@@ -1,6 +1,7 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import { getMovieDiscover } from 'store/actions/moviesActions';
+import SearchInput from 'components/SearchInput';
 
 export default function Home() {
 
@@ -12,16 +13,23 @@ export default function Home() {
     }, [])
 
     return (
+        <>
+        <div className="backgroundImage" />
         <div className="homeComponent">
-            <nav className="topNavComponent">Discover</nav>
-            <h1 className="centerTitle">Recomendations</h1>
+            <nav className="topNavComponent">
+                <h1 className="pageTitle">Your Local Movie Theater!</h1>
+                <SearchInput style={{marginRight:"2rem"}}/>
+            </nav>
+            <h2 className="centerTitle">Recomendations</h2>
             <section className="movieListContainer">
-                {movies.map((movie)=>
-                    <article>
-                    {movie.title} - {movie.vote_average} 
+                {movies.map((movie) =>
+                    <article key={`movie-${movie.title}`}>
+                        <img src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`} alt={`${movie.title}-poster`} />
+                        {movie.title} - {movie.vote_average}
                     </article>
                 )}
             </section>
         </div>
+        </>
     )
 }

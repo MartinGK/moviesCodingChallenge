@@ -20,7 +20,7 @@ function App() {
   return (
     <Provider store={store}>
         <Router>
-          <main>
+          <main >
             <Switch>
               <Route path="/" exact render={props => <Home action="login" />} />
               <Route
