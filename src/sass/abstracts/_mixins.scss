@@ -67,3 +67,12 @@ ORDER: base + typography > general layout + grid > page layout > components + pa
         @content;
     }
 }
+
+
+//Flex centering
+
+@mixin center-flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -84,6 +84,7 @@
         width: 100%;
         height: 100%;
         display: block;
+        cursor: pointer;
     }
     &--viewMore{
         border: 1px solid $primaryColor;
@@ -94,6 +95,8 @@
         transition: all 1s;
         &:hover{
             font-size: 1.4rem;
+            color: $secondaryColor;
+            background: $primaryColor;
             cursor: pointer;
         }
     }

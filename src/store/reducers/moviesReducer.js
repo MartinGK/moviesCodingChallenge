@@ -1,9 +1,14 @@
-import { MOVIES_UPDATE, ERROR } from "store/actions/types";
+import { MOVIES_UPDATE, ERROR, SELECTED_MOVIE_UPDATE } from "store/actions/types";
 
 const initialState = {
     error: "",
-    data: [], 
-    loading: false
+    data: [],
+    loading: false,
+    selectedMovie: {
+        data: "",
+        title: "",
+        open: false
+    }
 };
 
 export default function (state = initialState, action) {
@@ -12,7 +17,12 @@ export default function (state = initialState, action) {
             return {
                 ...state,
                 data: action.payload,
-                loading:false
+                loading: false
+            };
+        case SELECTED_MOVIE_UPDATE:
+            return {
+                ...state,
+                selectedMovie: { ...action.payload }
             };
         case ERROR:
             return {
