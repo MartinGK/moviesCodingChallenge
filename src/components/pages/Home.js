@@ -6,7 +6,8 @@ import Modal from 'components/Modal';
 import StarsRating from 'components/StarsRating';
 
 export default function Home() {
-    const [numberStars, setNumberStars] = useState(0)
+    const [numberStars, setNumberStars] = useState(-1)
+    const [title, setTitle] = useState("Discover")
 
     const movies = useSelector(state => state.movies.data);
     const selectedMovie = useSelector(state => state.movies.selectedMovie);
@@ -16,16 +17,18 @@ export default function Home() {
         dispatch(getMovieDiscover());
     }, [])
 
-    useEffect(() => {
-        dispatch(getMovieDiscover());
-    }, [numberStars])
-
     const handleArticleClick = (movieId) => {
         dispatch(getMovieDetail(movieId));
     }
 
     const searchFunction = (text) => {
-        dispatch(getSearchMovie(text));
+        if (text === "") {
+            setTitle("Discover");
+            dispatch(getMovieDiscover(text));
+        } else {
+            setTitle(`Movies with: \"${text}\"`);
+            dispatch(getSearchMovie(text));
+        }
     }
 
 
@@ -46,9 +49,11 @@ export default function Home() {
                 </nav>
             </div>
             <div className="homeComponent">
-                <h2 className="centerTitle sectionTitle">Discover</h2>
+                <h2 className="centerTitle sectionTitle">{title}</h2>
                 <section className="movieListContainer">
-                    {movies.sort((a, b) => b.vote_average - a.vote_average)
+                    {movies
+                        .filter(movie => numberStars !== -1 ? movie.vote_average >= numberStars - 2 && movie.vote_average <= numberStars : true)
+                        .sort((a, b) => b.vote_average - a.vote_average)
                         .map((movie, i) =>
                             <article onClick={() => handleArticleClick(movie.id)} className={i < 3 ? `itemArticle--popular-${i}` : "itemArticle"} key={`movie-${movie.title}`}>
                                 <img className="itemArticle--img" title={movie.title} src={`https://image.tmdb.org/t/p/w${i < 3 ? "500" : "200"}/${movie.poster_path}`} alt={`${movie.title}-poster`} />
