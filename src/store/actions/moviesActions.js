@@ -1,4 +1,4 @@
-import { MOVIES_UPDATE, ERROR, SELECTED_MOVIE_UPDATE } from "store/actions/types";
+import { MOVIES_UPDATE, ERROR, SELECTED_MOVIE_UPDATE, SEARCHED_MOVIES_UPDATE } from "store/actions/types";
 import {moviesApikey} from "helpers/constants"
 
 export const getMovieDiscover = () => dispatch => {
@@ -20,11 +20,18 @@ export const getMovieDiscover = () => dispatch => {
 }
 
 export const getSearchMovie = (movieText) => dispatch => {
-    fetch(`https://api.themoviedb.org/3/search/movie?api_key=${moviesApikey}&language=en-US&query=${movieText}&page=1&include_adult=false`,{
+    let url = "";
+    if(movieText === ""){
+        url = `https://api.themoviedb.org/3/discover/movie?api_key=${moviesApikey}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false`
+    }else{
+        url = `https://api.themoviedb.org/3/search/movie?api_key=${moviesApikey}&language=en-US&query=${movieText}&page=1&include_adult=false`
+    }
+    fetch(url,{
         method: 'GET'
         })
         .then(res => res.json())
         .then(data => {
+            console.log(data)
             dispatch({
                 type: MOVIES_UPDATE,
                 payload: data.results

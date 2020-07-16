@@ -1,5 +1,5 @@
 .starsRatingContainer {
-    width: 50rem;
+    width: 43rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,4 +26,11 @@
 
 .starsValue{
     font-size: 1.4rem;
+}
+
+.ratingFilterContainer{
+    top: 11rem;
+    right: -3rem;
+    background-color: #ABABAB;
+    border-radius: 0rem 0rem 1rem 1rem;
 }

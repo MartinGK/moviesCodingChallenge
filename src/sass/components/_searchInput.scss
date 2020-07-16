@@ -18,11 +18,10 @@
 
 .scopeIcon{
     justify-self: flex-end;
-    // position: absolute;
     width: 2rem;
     margin-left: -2.2rem;
-    // margin-top: .2rem;
     opacity: .5;
     color: $primaryColor;
     background-color: $secondaryColor;
+    cursor: pointer;
 }

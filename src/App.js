@@ -22,7 +22,7 @@ function App() {
         <Router>
           <main >
             <Switch>
-              <Route path="/" exact render={props => <Home action="login" />} />
+              <Route path="/" render={props => <Home action="login" />} />
               <Route
                 exact
                 path="/register"
