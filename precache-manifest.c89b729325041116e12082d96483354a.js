@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4737ca40025201b39361312da544d460",
+    "revision": "b27200f25f5312e9137c7396830e226e",
     "url": "/moviesCodingChallenge/index.html"
   },
   {
-    "revision": "0fe4e9533443fdbe7468",
+    "revision": "a6c072498b21ae39f314",
     "url": "/moviesCodingChallenge/static/css/main.6e4c4e6f.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/moviesCodingChallenge/static/js/2.2a32776c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0fe4e9533443fdbe7468",
-    "url": "/moviesCodingChallenge/static/js/main.0249ae6a.chunk.js"
+    "revision": "a6c072498b21ae39f314",
+    "url": "/moviesCodingChallenge/static/js/main.3364bbc5.chunk.js"
   },
   {
     "revision": "3e7331890faf4daa2390",
