@@ -1,4 +1,4 @@
-import { MOVIES_UPDATE, ERROR, SELECTED_MOVIE_UPDATE, SEARCHED_MOVIES_UPDATE } from "store/actions/types";
+import { MOVIES_UPDATE, ERROR, SELECTED_MOVIE_UPDATE } from "store/actions/types";
 
 const initialState = {
     error: "",
@@ -9,10 +9,6 @@ const initialState = {
         title: "",
         open: false
     },
-    searchedMovies:{
-        data:[],
-        loading: false
-    }
 };
 
 export default function (state = initialState, action) {
@@ -22,11 +18,6 @@ export default function (state = initialState, action) {
                 ...state,
                 data: action.payload,
                 loading: false
-            };
-        case SEARCHED_MOVIES_UPDATE:
-            return {
-                ...state,
-                searchedMovies: { ...action.payload }
             };
         case SELECTED_MOVIE_UPDATE:
             return {

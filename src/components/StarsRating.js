@@ -5,11 +5,11 @@ export default function StarsRating(props) {
     const starsLimit = [...Array(10).keys()];
 
     const hoveringStars = (starId) => {
-        starsLimit.map(id => {
+        starsLimit.map(id => 
             id <= starId ?
                 document.querySelector(`#star-${id}`).style.background = "orange" :
                 document.querySelector(`#star-${id}`).style.background = "#c4c4c4"
-        })
+        )
     }
 
     const handleClickStar = (numberStar) => {

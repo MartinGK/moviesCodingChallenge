@@ -4,6 +4,7 @@ import { getMovieDiscover, getMovieDetail, closeSelectedMovieModal, getSearchMov
 import SearchInput from 'components/SearchInput';
 import Modal from 'components/Modal';
 import StarsRating from 'components/StarsRating';
+import { PAGE_URL } from 'helpers/constants';
 
 export default function Home() {
     const [numberStars, setNumberStars] = useState(-1)
@@ -26,15 +27,14 @@ export default function Home() {
             setTitle("Discover");
             dispatch(getMovieDiscover(text));
         } else {
-            setTitle(`Movies with: \"${text}\"`);
+            setTitle(`Movies with: "${text}"`);
             dispatch(getSearchMovie(text));
         }
     }
 
-
     return (
         <>
-            <div className="backgroundImage" />
+            <div className="backgroundImage" style={{backgroundImage: `url(${PAGE_URL}/movieIcon.png)`}} />
             <div className="topNavbarContainer">
                 <nav className="topNavComponent">
                     <h1 className="pageTitle">Your Local Movie Theater!</h1>

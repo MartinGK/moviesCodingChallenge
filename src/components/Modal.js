@@ -4,7 +4,7 @@ import StarsRating from 'components/StarsRating';
 export default function Modal(props) {
     return (
         <>
-            <input className="modal-state" id="modal-1" type="checkbox" checked={props.open} />
+            <input className="modal-state" id="modal-1" type="checkbox" checked={props.open} onChange={()=>{}}/>
             <div className="modal">
                 <label className="modal__bg" onClick={props.onClose} htmlFor="modal-1"></label>
                 <div className="modal__inner">

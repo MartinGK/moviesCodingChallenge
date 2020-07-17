@@ -1,4 +1,4 @@
-import { MOVIES_UPDATE, ERROR, SELECTED_MOVIE_UPDATE, SEARCHED_MOVIES_UPDATE } from "store/actions/types";
+import { MOVIES_UPDATE, ERROR, SELECTED_MOVIE_UPDATE } from "store/actions/types";
 import {moviesApikey} from "helpers/constants"
 
 export const getMovieDiscover = () => dispatch => {
