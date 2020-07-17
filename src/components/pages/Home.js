@@ -37,7 +37,7 @@ export default function Home() {
             <div className="backgroundImage" style={{backgroundImage: `url(${PAGE_URL}/static/movieIcon.png)`}} />
             <div className="topNavbarContainer">
                 <nav className="topNavComponent">
-                    <h1 className="pageTitle">Your Local Movie Theater!</h1>
+                    <h1 className="pageTitle" onClick={()=>searchFunction("")}>Your Local Movie Theater!</h1>
                     <SearchInput style={{ marginRight: "2rem" }} searchFunction={searchFunction} />
                     <div className="absolutePosition">
                         <div className="relativePosition">

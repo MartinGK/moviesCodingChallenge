@@ -13,7 +13,7 @@ html{
     font-size: 62.5%;
     font-family: Roboto;
     @include responsive(phone){
-        //font-size: 50%
+        font-size: 50%;
     }
 }
 

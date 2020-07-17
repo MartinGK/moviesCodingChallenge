@@ -1,4 +1,4 @@
-.homeComponent{
+.homeComponent {
     min-width: 100vw;
     min-height: 100vh;
     width: 100%;
@@ -11,7 +11,7 @@
     overflow-y: auto;
 }
 
-.backgroundImage{
+.backgroundImage {
     position: fixed;
     opacity: 0.3;
     background-size: 50rem 46rem;
@@ -24,15 +24,16 @@
     transform: rotateY(180deg) rotate(-10deg);
     z-index: -1;
 }
-.pageTitle{
+.pageTitle {
     color: $secondaryColor;
     margin-left: 2rem;
+    cursor:pointer;
 }
-.topNavbarContainer{
+.topNavbarContainer {
     padding-bottom: 11rem;
 }
 
-.topNavComponent{
+.topNavComponent {
     width: 100vw;
     background: $primaryColor;
     min-height: 5rem;
@@ -43,56 +44,59 @@
     padding: 3rem 0rem;
 }
 
-.movieListContainer{
+.movieListContainer {
     // display: grid;
     // grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     // grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
     // grid-gap: 1.5rem;
     // width: 50vw;
 
-    
     display: grid;
-    grid-template-columns:repeat(6, 20rem);
-    grid-template-rows:repeat(auto-fill, 30rem);
+    grid-template-columns: repeat(6, 20rem);
+    grid-template-rows: repeat(auto-fill, 30rem);
     grid-gap: 1.5rem;
     margin: 5rem;
-    
+
+    @include responsive(phone) {
+        grid-template-columns: repeat(6, 8rem);
+        grid-template-rows: repeat(auto-fill, 10rem);
+    }
 }
 
-.itemArticle{
+.itemArticle {
     display: flex;
     flex-direction: column;
     box-shadow: $defaultShadow;
     max-width: 20rem;
-    &--popular{
-        &-0{
+    &--popular {
+        &-0 {
             grid-row: 1 / span 2;
             grid-column: 1 / span 2;
         }
-        &-1{
+        &-1 {
             grid-row: 1 / span 2;
             grid-column: 3 / span 2;
         }
-        &-2{
+        &-2 {
             grid-row: 1 / span 2;
             grid-column: 5 / span 2;
         }
     }
-    &--img{
+    &--img {
         object-fit: cover;
         width: 100%;
         height: 100%;
         display: block;
         cursor: pointer;
     }
-    &--viewMore{
+    &--viewMore {
         border: 1px solid $primaryColor;
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: 1.2rem;
         transition: all 1s;
-        &:hover{
+        &:hover {
             font-size: 1.4rem;
             color: $secondaryColor;
             background: $primaryColor;
@@ -101,7 +105,7 @@
     }
 }
 
-.sectionTitle{
+.sectionTitle {
     margin: 2rem;
     font-size: 4rem;
     font-weight: italic;

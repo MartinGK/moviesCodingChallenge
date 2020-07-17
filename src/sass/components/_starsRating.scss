@@ -3,11 +3,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include responsive(phone) {
+        width: 16rem;
+    }
 }
 
 .star {
     height: 8rem;
     width: 8rem;
+    @include responsive(phone) {
+        height: 3rem;
+        width: 3rem;
+    }
+
     cursor: pointer;
     &--left {
         clip-path: polygon(50% 0%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
@@ -15,22 +24,28 @@
     &--right {
         clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%);
         margin-left: -8.1rem;
+        @include responsive(phone) {
+            margin-left: -3.1rem;
+        }
     }
-    &--checked{
+    &--checked {
         background: orange;
     }
-    &--notChecked{
+    &--notChecked {
         background: #c4c4c4;
     }
 }
 
-.starsValue{
+.starsValue {
     font-size: 1.4rem;
 }
 
-.ratingFilterContainer{
+.ratingFilterContainer {
     top: 11rem;
     right: -3rem;
-    background-color: #ABABAB;
+    background-color: #ababab;
     border-radius: 0rem 0rem 1rem 1rem;
+    @include responsive(phone){
+        right: -1rem;
+    }
 }
