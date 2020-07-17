@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/moviesCodingChallenge/static/css/main.6e4c4e6f.chunk.css",
-    "main.js": "/moviesCodingChallenge/static/js/main.3364bbc5.chunk.js",
-    "main.js.map": "/moviesCodingChallenge/static/js/main.3364bbc5.chunk.js.map",
+    "main.css": "/moviesCodingChallenge/static/css/main.127765a8.chunk.css",
+    "main.js": "/moviesCodingChallenge/static/js/main.53b1a79b.chunk.js",
+    "main.js.map": "/moviesCodingChallenge/static/js/main.53b1a79b.chunk.js.map",
     "runtime-main.js": "/moviesCodingChallenge/static/js/runtime-main.f112f644.js",
     "runtime-main.js.map": "/moviesCodingChallenge/static/js/runtime-main.f112f644.js.map",
     "static/js/2.2a32776c.chunk.js": "/moviesCodingChallenge/static/js/2.2a32776c.chunk.js",
     "static/js/2.2a32776c.chunk.js.map": "/moviesCodingChallenge/static/js/2.2a32776c.chunk.js.map",
     "index.html": "/moviesCodingChallenge/index.html",
-    "precache-manifest.c89b729325041116e12082d96483354a.js": "/moviesCodingChallenge/precache-manifest.c89b729325041116e12082d96483354a.js",
+    "precache-manifest.70f4f4c06a0035c74639c2113194e459.js": "/moviesCodingChallenge/precache-manifest.70f4f4c06a0035c74639c2113194e459.js",
     "service-worker.js": "/moviesCodingChallenge/service-worker.js",
-    "static/css/main.6e4c4e6f.chunk.css.map": "/moviesCodingChallenge/static/css/main.6e4c4e6f.chunk.css.map",
+    "static/css/main.127765a8.chunk.css.map": "/moviesCodingChallenge/static/css/main.127765a8.chunk.css.map",
     "static/js/2.2a32776c.chunk.js.LICENSE.txt": "/moviesCodingChallenge/static/js/2.2a32776c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.f112f644.js",
     "static/js/2.2a32776c.chunk.js",
-    "static/css/main.6e4c4e6f.chunk.css",
-    "static/js/main.3364bbc5.chunk.js"
+    "static/css/main.127765a8.chunk.css",
+    "static/js/main.53b1a79b.chunk.js"
   ]
 }
