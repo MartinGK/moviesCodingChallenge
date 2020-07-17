@@ -34,7 +34,7 @@ export default function Home() {
 
     return (
         <>
-            <div className="backgroundImage" style={{backgroundImage: `url(${PAGE_URL}/movieIcon.png)`}} />
+            <div className="backgroundImage" style={{backgroundImage: `url(${PAGE_URL}/static/movieIcon.png)`}} />
             <div className="topNavbarContainer">
                 <nav className="topNavComponent">
                     <h1 className="pageTitle">Your Local Movie Theater!</h1>
