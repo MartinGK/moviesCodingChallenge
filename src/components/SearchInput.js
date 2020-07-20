@@ -12,8 +12,8 @@ export default function SearchInput(props) {
     }
 
     return (
-        <div className="searchInputContainer" style={props.style}>
-            <input onChange={(e)=>setText(e.target.value)} className="searchInput" type="text" placeholder="Search Movie..." onKeyDown={handleKeyDown} />
+        <div className="searchInputContainer" style={props.style ? props.style : {}}>
+            <input onChange={(e)=>setText(e.target.value)} value={text} className="searchInput" type="text" placeholder="Search Movie..." onKeyDown={handleKeyDown} />
             <img src={PAGE_URL + "/static/scopeIcon.svg"} alt="scope icon" className="scopeIcon" onClick={() => props.searchFunction(text)} />
         </div>
     )

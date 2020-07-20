@@ -25,7 +25,6 @@ export const getSearchMovie = (movieText) => dispatch => {
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data)
             dispatch({
                 type: MOVIES_UPDATE,
                 payload: data.results
@@ -48,8 +47,6 @@ export const getMovieDetail = (movieId) => dispatch => {
         })
         .then(res => res.json())
         .then(data => {
-            console.log("data")
-            console.log(data)
             dispatch({
                 type: SELECTED_MOVIE_UPDATE,
                 payload: {...data, open:true}

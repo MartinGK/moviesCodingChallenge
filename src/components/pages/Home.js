@@ -4,6 +4,7 @@ import { getMovieDiscover, getMovieDetail, closeSelectedMovieModal, getSearchMov
 import SearchInput from 'components/SearchInput';
 import Modal from 'components/Modal';
 import StarsRating from 'components/StarsRating';
+import MovieDetail from 'components/MovieDetail';
 import { PAGE_URL } from 'helpers/constants';
 
 export default function Home() {
@@ -34,10 +35,10 @@ export default function Home() {
 
     return (
         <>
-            <div className="backgroundImage" style={{backgroundImage: `url(${PAGE_URL}/static/movieIcon.png)`}} />
+            <div className="backgroundImage" style={{ backgroundImage: `url(${PAGE_URL}/static/movieIcon.png)` }} />
             <div className="topNavbarContainer">
                 <nav className="topNavComponent">
-                    <h1 className="pageTitle" onClick={()=>searchFunction("")}>Your Local Movie Theater!</h1>
+                    <h1 className="pageTitle" onClick={() => searchFunction("")}>Your Local Movie Theater!</h1>
                     <SearchInput style={{ marginRight: "2rem" }} searchFunction={searchFunction} />
                     <div className="absolutePosition">
                         <div className="relativePosition">
@@ -64,7 +65,9 @@ export default function Home() {
                     </article>
                 </section>
             </div>
-            <Modal open={selectedMovie.open} data={selectedMovie} onClose={() => dispatch(closeSelectedMovieModal())} title={selectedMovie.title} />
+            <Modal open={selectedMovie.open} onClose={() => dispatch(closeSelectedMovieModal())} >
+                        <MovieDetail />
+            </Modal>
         </>
     )
 }
